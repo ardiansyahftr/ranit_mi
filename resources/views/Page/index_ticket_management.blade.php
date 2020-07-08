@@ -81,7 +81,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
-                            <select name="project" id="project" class="selectpicker col-md-12" data-style="select-with-transition">
+                            <select name="project" id="project" required class="selectpicker col-md-12" data-style="select-with-transition">
                                   <option value="">-- Project --</option>
                                   @foreach ($project as $item)
                                       <option value="{{$item->id}}">{{$item->code_project}} - {{$item->name}}</option>
@@ -94,7 +94,7 @@
                       <div class="row">
                         <div class="col-md-12">
                           <div class="form-group">
-                            <select name="priority" id="priority" class="selectpicker col-md-12" data-style="select-with-transition">
+                            <select name="priority" id="priority" required class="selectpicker col-md-12" data-style="select-with-transition">
                                   <option value="">-- Priority --</option>
                                   @foreach ($priority as $item)
                                       <option value="{{$item->id}}"><span class='badge badge-{{$item->type}}'>{{$item->name}}</span></option>
@@ -107,7 +107,7 @@
                         <div class="col-md-12">
                           <div class="form-group">
                             <label for="inputState">Deadline</label>
-                            <input type="text" class="form-control datepicker" value="{{date('Y-m-d')}}" name="deadline" id="deadline">
+                            <input type="text" class="form-control datepicker" value="{{date('Y-m-d')}}" name="deadline" required id="deadline">
                           </div>
                         </div>
                       </div>
@@ -182,7 +182,7 @@
                             <div class="form-group">
                               <input type="hidden" class="form-control" name="id" value="" id="edit_id">
                               <input type="hidden" class="form-control" name="code_ticket" value="" id="edit_code_ticket_h">
-                              <select name="project" id="edit_project" class="selectpicker col-md-12" data-style="select-with-transition" required="">
+                              <select name="project" id="edit_project" required class="selectpicker col-md-12" data-style="select-with-transition" required="">
                                     <option value="">-- Project --</option>
                                     @foreach ($project as $item)
                                         <option value="{{$item->id}}">{{$item->code_project}} - {{$item->name}}</option>
@@ -194,7 +194,7 @@
                         <div class="row">
                           <div class="col-md-12">
                             <div class="form-group">
-                              <select name="priority" id="edit_priority" class="selectpicker col-md-12" data-style="select-with-transition" required="">
+                              <select name="priority" id="edit_priority" required class="selectpicker col-md-12" data-style="select-with-transition" required="">
                                     <option value="">-- Priority --</option>
                                     @foreach ($priority as $item)
                                         <option value="{{$item->id}}"><span class='badge badge-{{$item->type}}'>{{$item->name}}</span></option>
@@ -207,7 +207,7 @@
                           <div class="col-md-12">
                             <div class="form-group">
                               <label for="inputState">Deadline</label>
-                              <input type="text" class="form-control datepicker" value="" name="deadline" id="edit_deadline" required="">
+                              <input type="text" class="form-control datepicker" value="" name="deadline" required id="edit_deadline" required="">
                             </div>
                           </div>
                         </div>
@@ -431,10 +431,10 @@ $('#id_Ticket_tab').show();
                 <input type="file" id="edit_product-image-file${lkObj.id}" onchange="readURL(this, 'edit_product-image${lkObj.id}');" name="edit_photo${lkObj.id}" style="display:none"></td>
                 <td>
                 <input type="hidden" name="edit_detail_id[]" id="edit_detail_id${lkObj.id}" value="${lkObj.id}"/>
-                    <textarea class="form-control" id="edit_bug_desc${lkObj.id}" rows="3" name="edit_bug_desc[]" value="">${lkObj.bug_desc}</textarea>
+                    <textarea class="form-control" id="edit_bug_desc${lkObj.id}" required rows="3" name="edit_bug_desc[]" value="">${lkObj.bug_desc}</textarea>
                 </td>
                 <td>
-                    <select name="edit_priority_d[]" id="edit_priority_d${lkObj.id}" class="selectpicker col-md-12" data-style="select-with-transition">
+                    <select name="edit_priority_d[]" id="edit_priority_d${lkObj.id}" required class="selectpicker col-md-12" data-style="select-with-transition">
                         <option value="">-- Priority --</option>`;
                         @foreach ($priority as $item)
                             bug_row += '<option value="{{$item->id}}"><span class="badge badge-{{$item->type}}">{{$item->name}}</span></option>';

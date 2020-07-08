@@ -85,7 +85,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <select name="status" id="status" class="selectpicker col-md-12" data-style="select-with-transition">
+                          <select name="status" required id="status" class="selectpicker col-md-12" data-style="select-with-transition">
                                 <option value="">Status</option>
                                 @foreach ($project_status as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
@@ -99,13 +99,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="inputState">Start Date</label>
-                          <input type="text" class="form-control datepicker" value="{{date('Y-m-d')}}" name="start_date" id="start_date">
+                          <input type="text" class="form-control datepicker" value="{{date('Y-m-d')}}" name="start_date" required id="start_date">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="inputState">Deadline</label>
-                          <input type="text" class="form-control datepicker" value="{{date('Y-m-d')}}" name="deadline" id="deadline">
+                          <input type="text" class="form-control datepicker" value="{{date('Y-m-d')}}" name="deadline" required id="deadline">
                         </div>
                       </div>
                     </div>
@@ -159,7 +159,7 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <select name="status" id="edit_status" class="selectpicker col-md-12" data-style="select-with-transition">
+                          <select name="status" required id="edit_status" class="selectpicker col-md-12" data-style="select-with-transition">
                                 <option value="">Status</option>
                                 @foreach ($project_status as $item)
                                     <option value="{{$item->id}}">{{$item->name}}</option>
@@ -173,13 +173,13 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="inputState">Start Date</label>
-                          <input type="text" class="form-control datepicker" value="" name="start_date" id="edit_start_date">
+                          <input type="text" class="form-control datepicker" value="" name="start_date" required id="edit_start_date">
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="inputState">Deadline</label>
-                          <input type="text" class="form-control datepicker" value="" name="deadline" id="edit_deadline">
+                          <input type="text" class="form-control datepicker" value="" name="deadline" required id="edit_deadline">
                         </div>
                       </div>
                     </div>

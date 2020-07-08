@@ -58,10 +58,10 @@ class AjaxController extends Controller
                 <td class="text-center"><img onclick="$(`#product-image-file'.$next.'`).click()" id="product-image'.$next.'" onmouseover="" src="'.asset('assets/img/add_image.png').'" onerror="this.src = '.asset('assets/img/add_image.png').'" style="cursor:pointer;opacity:0.5; top: 2em; height: 100px;">
                 <input type="file" id="product-image-file'.$next.'" onchange="readURL(this, `product-image'.$next.'`);" name="photo[]" style="display:none"></td>
                 <td>
-                    <textarea class="form-control" id="bug_desc'.$next.'" rows="3" name="bug_desc[]" ></textarea>
+                    <textarea class="form-control" id="bug_desc'.$next.'" rows="3" name="bug_desc[]" required></textarea>
                 </td>
                 <td>
-                    <select name="priority_d[]" id="priority_d'.$next.'" class="selectpicker col-md-12" data-style="select-with-transition">
+                    <select name="priority_d[]" id="priority_d'.$next.'" requuired class="selectpicker col-md-12" data-style="select-with-transition">
                         <option value="">-- Priority --</option>';
                         foreach ($priority as $item){
                             $lokasi .= '<option value="'.$item->id.'"><span class="badge badge-'.$item->type.'">'.$item->name.'</span></option>';
@@ -85,10 +85,10 @@ class AjaxController extends Controller
                 <td class="text-center"><img onclick="$(`#edit_product-image-file'.$next.'`).click()" id="edit_product-image'.$next.'" onmouseover="" src="'.asset('assets/img/add_image.png').'" onerror="this.src = '.asset('assets/img/add_image.png').'" style="cursor:pointer;opacity:0.5; top: 2em; height: 100px;">
                 <input type="file" id="edit_product-image-file'.$next.'" onchange="readURL(this, `edit_product-image'.$next.'`);" name="photo[]" style="display:none"></td>
                 <td>
-                    <textarea class="form-control" id="edit_bug_desc'.$next.'" rows="3" name="bug_desc[]" ></textarea>
+                    <textarea class="form-control" id="edit_bug_desc'.$next.'" rows="3" name="bug_desc[]" required></textarea>
                 </td>
                 <td>
-                    <select name="priority_d[]" id="edit_priority_d'.$next.'" class="selectpicker col-md-12" data-style="select-with-transition">
+                    <select name="priority_d[]" id="edit_priority_d'.$next.'" requuired class="selectpicker col-md-12" data-style="select-with-transition">
                         <option value="">-- Priority --</option>';
                         foreach ($priority as $item){
                             $lokasi .= '<option value="'.$item->id.'"><span class="badge badge-'.$item->type.'">'.$item->name.'</span></option>';
